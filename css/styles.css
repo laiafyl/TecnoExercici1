@@ -1,0 +1,142 @@
+:root {
+  --orange: #fcb782;
+  --light-orange: #faefe3;
+  --electric-orange: #f27923;
+  --dark-grey: #333333;
+  --white: #ffffff;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h5,
+p {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--orange);
+}
+
+/*Aquest estil es de prova, no es necessari per al projecte final.
+* {
+  border: 1px solid black;
+}
+*/
+
+.hero {
+  padding: 67px;
+}
+.container {
+  border: 1px solid black;
+  display: flex;
+  width: 1312px;
+  margin: auto; /* esccentrar l'element */
+}
+.column {
+  width: 50%;
+  border: 1px solid red;
+}
+.heading-wrapper {
+  margin-top: 70px;
+  display: flex; /* el seus fills es mostren de costat */
+  align-items: center; /* centra en vertical els seus fills */
+}
+.heading-wrapper .badge .text-badge {
+  transform-origin: center;
+  animation: rotate linear 5s infinite;
+  animation-play-state: paused;
+}
+.heading-wrapper .badge:hover .text-badge {
+  animation-play-state: running;
+}
+
+h1 {
+  font-size: 112px;
+  font-family: Times New Roman;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 108px;
+  text-decoration: none;
+  text-transform: none;
+  color: var(--white);
+}
+
+.text {
+  padding: 40px 0;
+}
+.text p {
+  font-size: 24px;
+  font-family: Helvetica;
+  font-weight: 400;
+  font-style: normal;
+  text-decoration: none;
+  text-transform: none;
+  color: var(--white);
+}
+
+.text a {
+  background-color: var(--electric-orange);
+  color: var(--white);
+  padding: 24px 40px;
+  border-radius: 30px 20px;
+  display: inline-block;
+  margin-top: 40px;
+  transition: 0.3s all;
+}
+.text a:hover {
+  background-color: var(--dark-grey);
+  color: var(--electric-orange);
+  transform: scale(1.05);
+}
+.btn-text {
+  font-size: 20px;
+  font-family: Helvetica;
+  font-weight: 500;
+  font-style: normal;
+  line-height: 18px;
+  text-decoration: none;
+  text-transform: none;
+}
+.cards-wrapper {
+  padding: 20px 0;
+  display: flex;
+  gap: 16px;
+}
+.card {
+  padding: 20px;
+  border-radius: 24px;
+  background-color: var(--light-orange);
+}
+
+.card-title {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  margin-bottom: 9px;
+}
+.card-title i {
+  font-size: 18px;
+  color: var(--orange);
+}
+
+p {
+  font-size: 16px;
+  font-family: Helvetica;
+  font-weight: 300;
+  font-style: normal;
+  text-decoration: none;
+  text-transform: none;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
