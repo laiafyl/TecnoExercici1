@@ -18,7 +18,7 @@ p {
 }
 
 body {
-  background: linear-gradient(180deg, #fcb782 85%, #fff 85%, #fff 100%);
+  background-color: var(--orange);
 }
 
 /*Aquest estil es de prova, no es necessari per al projecte final.
@@ -31,14 +31,12 @@ body {
   padding: 67px;
 }
 .container {
-  border: 1px solid black;
   display: flex;
   width: 1312px;
   margin: auto; /* esccentrar l'element */
 }
 .column {
   width: 50%;
-  border: 1px solid red;
 }
 .heading-wrapper {
   margin-top: 70px;
@@ -132,11 +130,141 @@ p {
   text-transform: none;
 }
 
+.shape {
+  position: absolute;
+  right: 0;
+  border-radius: 0 0 400px 400px;
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.05) 0%,
+    rgba(255, 255, 255, 0.8) 100%
+  );
+
+  width: 580px;
+  height: 790px;
+}
+.toy {
+  position: relative;
+  z-index: 1;
+}
 @keyframes rotate {
   0% {
     transform: rotate(0deg);
   }
   100% {
     transform: rotate(360deg);
+  }
+}
+
+.portfolio {
+  box-sizing: border-box;
+  width: 100vw;
+  min-height: 1075px;
+  margin-top: 85px;
+  margin-left: calc(50% - 50vw);
+  padding: 155px 0 252px;
+  background: linear-gradient(to bottom, var(--orange) 85%, var(--white));
+}
+
+.portfolio-title {
+  margin: 0 0 0 99px;
+  color: var(--white);
+  font-family: "Times New Roman", serif;
+  font-size: 112px;
+  font-weight: 400;
+  line-height: 108px;
+}
+
+.portfolio-cards-wrapper {
+  display: grid;
+  grid-template-columns: repeat(4, 235px);
+  justify-content: space-between;
+  width: calc(100% - 128px);
+  max-width: 1212px;
+  margin: 40px auto 0;
+}
+
+.portfolio-card {
+  position: relative;
+  width: 235px;
+  height: 440px;
+  border-radius: 10px;
+  background-color: #fe6e06;
+}
+
+.portfolio-image {
+  position: absolute;
+  top: 8.96%;
+  right: 11.1%;
+  bottom: 51.64%;
+  left: 11.17%;
+  background-color: #d9d9d9;
+}
+
+.portfolio-info {
+  position: absolute;
+  top: 53.13%;
+  right: 8.38%;
+  bottom: 20.3%;
+  left: 6.15%;
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+  padding: 8px 5px;
+  border-radius: 10px;
+  background-color: var(--orange);
+}
+
+.portfolio-info p,
+.portfolio-button p {
+  color: var(--white);
+  font-family: "Times New Roman", serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 17px;
+}
+
+.portfolio-button {
+  position: absolute;
+  top: 83.28%;
+  right: 20.67%;
+  bottom: 7.46%;
+  left: 18.99%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 5px;
+  border-radius: 10px;
+  background-color: var(--orange);
+}
+
+.portfolio-button p {
+  text-align: center;
+}
+
+@media (max-width: 1100px) {
+  .portfolio-cards-wrapper {
+    grid-template-columns: repeat(2, 235px);
+    justify-content: space-around;
+    row-gap: 32px;
+  }
+}
+
+@media (max-width: 600px) {
+  .portfolio {
+    padding-top: 100px;
+  }
+
+  .portfolio-title {
+    margin-left: 32px;
+    font-size: 72px;
+    line-height: 76px;
+  }
+
+  .portfolio-cards-wrapper {
+    grid-template-columns: 235px;
+    justify-content: center;
+    width: calc(100% - 32px);
+    margin-top: 64px;
   }
 }

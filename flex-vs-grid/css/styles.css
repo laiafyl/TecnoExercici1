@@ -1,0 +1,42 @@
+body {
+  margin: 0;
+}
+.products {
+  background-color: #f0f0f0;
+  padding: 50px 0;
+}
+.flexbox {
+  display: flex;
+  flex-wrap: wrap;
+  width: 1200px;
+  margin: auto;
+}
+.gridbox {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+
+  margin: auto;
+}
+
+.product {
+  background-color: #fff;
+  padding: 20px;
+
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+.product img {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+}
+/* RESPONSIVE DESIGN */
+
+@media (max-width: 1200px) {
+  .gridbox {
+    width: 100%;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
