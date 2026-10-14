@@ -187,7 +187,9 @@ p {
   z-index: 1;
   margin: 0 0 0 99px;
   color: var(--white);
-  font-family: Helvetica, sans-serif;
+  font-family:
+    Times New Roman,
+    sans-serif;
   font-size: 112px;
   font-weight: 400;
   line-height: 108px;
@@ -247,7 +249,7 @@ p {
 .portfolio-info p,
 .portfolio-button p {
   color: var(--white);
-  font-family: "Times New Roman", serif;
+  font-family: "Helvetica", serif;
   font-size: 16px;
   font-weight: 400;
   line-height: 17px;
@@ -320,12 +322,12 @@ p {
   margin-top: -170px;
   padding: 0 70px;
   color: var(--electric-orange);
-  font-family: "Times New Roman", serif;
-  font-size: 16px;
+  font-family: "Helvetica", serif;
+  font-size: 20px;
 }
 
 .portfolio-contact p {
-  font-family: "Times New Roman", serif;
+  font-family: "Helvetica", serif;
   font-weight: 400;
   line-height: 24px;
 }
